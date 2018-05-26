@@ -1403,3 +1403,6 @@ class EcgBatch(ds.Batch):
 
         self.meta[i]["t_segments"] = np.vstack(bt.find_intervals_borders(src_data,
                                                                          bt.T_STATES))
+        
+        self.meta[i]["r_segments"] = np.vstack(bt.find_intervals_borders(src_data,
+                                                                         bt.R_STATE))
